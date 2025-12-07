@@ -27,19 +27,19 @@ public class CoreDemo {
         System.out.println("\n" + Prefixes.CORE_CONTEXT + "Step 2: ApplicationContext is ready\n");
 
         // Demo 1: Bean Lifecycle
-//        demoLifecycle(context);
+        demoLifecycle(context);
 
         // Demo 2: Dependency Injection
-//        demoDependencyInjection(context);
+        demoDependencyInjection(context);
 
         // Demo 3: Bean Scopes
-//        demoBeanScopes(context);
+        demoBeanScopes(context);
 
         // Demo 4: Lazy Initialization
         demoLazyInitialization(context);
 
-//        // Demo 5: Circular Dependency
-//        demoCircularDependency(context);
+        // Demo 5: Circular Dependency
+        demoCircularDependency(context);
 
         // Close context
         System.out.println("\n" + Prefixes.CORE_CONTEXT + "Final Step: Closing ApplicationContext");

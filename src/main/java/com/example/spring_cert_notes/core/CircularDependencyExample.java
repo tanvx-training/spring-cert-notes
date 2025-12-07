@@ -48,7 +48,6 @@ class ServiceB {
 
     public void doSomethingElse() {
         System.out.println(Prefixes.CORE_BEAN + "ServiceB: Working on something else...");
-        serviceA.doSomething();
     }
 }
 
@@ -81,6 +80,5 @@ class ServiceD {
 
     public void execute() {
         System.out.println(Prefixes.CORE_BEAN + "ServiceD: Executing...");
-        serviceC.process();
     }
 }
