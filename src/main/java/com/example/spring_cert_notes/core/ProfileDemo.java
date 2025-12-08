@@ -30,7 +30,11 @@ public class ProfileDemo {
         
         // Register configuration classes
         context.register(
-            DatabaseConfig.class,
+            DevDatabaseConfig.class,
+            TestDatabaseConfig.class,
+            ProdDatabaseConfig.class,
+            NonProdConfig.class,
+            DebugConfig.class,
             PropertySourcesConfig.class,
             SpELExamples.class,
             AdvancedSpELExamples.class,
