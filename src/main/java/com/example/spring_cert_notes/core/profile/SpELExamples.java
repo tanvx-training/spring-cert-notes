@@ -1,4 +1,4 @@
-package com.example.spring_cert_notes.core;
+package com.example.spring_cert_notes.core.profile;
 
 import com.example.spring_cert_notes.Prefixes;
 import org.springframework.beans.factory.annotation.Value;

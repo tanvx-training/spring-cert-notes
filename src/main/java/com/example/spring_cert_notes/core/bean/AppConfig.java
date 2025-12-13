@@ -1,4 +1,4 @@
-package com.example.spring_cert_notes.core;
+package com.example.spring_cert_notes.core.bean;
 
 import com.example.spring_cert_notes.Prefixes;
 import jakarta.annotation.PreDestroy;

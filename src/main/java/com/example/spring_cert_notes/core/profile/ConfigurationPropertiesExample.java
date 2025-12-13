@@ -1,6 +1,8 @@
-package com.example.spring_cert_notes.core;
+package com.example.spring_cert_notes.core.profile;
 
 import com.example.spring_cert_notes.Prefixes;
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.validation.annotation.Validated;
@@ -14,9 +16,9 @@ import java.util.Map;
 
 /**
  * EXAMPLE 4: @ConfigurationProperties (Type-safe Configuration)
- * 
+ * <p>
  * Better alternative to @Value for complex configurations
- * 
+ * <p>
  * Advantages:
  * - Type-safe
  * - Validation support
@@ -24,11 +26,14 @@ import java.util.Map;
  * - Relaxed binding (kebab-case, camelCase, snake_case)
  * - IDE autocomplete support
  */
+@Setter
+@Getter
 @Configuration
 @ConfigurationProperties(prefix = "app")
 @Validated
 public class ConfigurationPropertiesExample {
-    
+
+    // Getters and Setters
     // Simple properties
     @NotBlank
     private String name = "Spring Cert Notes";
@@ -50,64 +55,7 @@ public class ConfigurationPropertiesExample {
     
     // Map
     private Map<String, String> features = Map.of();
-    
-    // Getters and Setters
-    public String getName() {
-        return name;
-    }
-    
-    public void setName(String name) {
-        this.name = name;
-    }
-    
-    public String getVersion() {
-        return version;
-    }
-    
-    public void setVersion(String version) {
-        this.version = version;
-    }
-    
-    public int getMaxUsers() {
-        return maxUsers;
-    }
-    
-    public void setMaxUsers(int maxUsers) {
-        this.maxUsers = maxUsers;
-    }
-    
-    public boolean isDebugMode() {
-        return debugMode;
-    }
-    
-    public void setDebugMode(boolean debugMode) {
-        this.debugMode = debugMode;
-    }
-    
-    public Database getDatabase() {
-        return database;
-    }
-    
-    public void setDatabase(Database database) {
-        this.database = database;
-    }
-    
-    public List<String> getAllowedOrigins() {
-        return allowedOrigins;
-    }
-    
-    public void setAllowedOrigins(List<String> allowedOrigins) {
-        this.allowedOrigins = allowedOrigins;
-    }
-    
-    public Map<String, String> getFeatures() {
-        return features;
-    }
-    
-    public void setFeatures(Map<String, String> features) {
-        this.features = features;
-    }
-    
+
     @PostConstruct
     public void displayConfig() {
         System.out.println("\n" + Prefixes.CORE_BEAN + "=== @ConfigurationProperties Example ===");
@@ -124,42 +72,13 @@ public class ConfigurationPropertiesExample {
     /**
      * Nested configuration class
      */
+    @Setter
+    @Getter
     public static class Database {
         private String url = "jdbc:h2:mem:testdb";
         private String username = "sa";
         private String password = "";
         private int poolSize = 10;
-        
-        public String getUrl() {
-            return url;
-        }
-        
-        public void setUrl(String url) {
-            this.url = url;
-        }
-        
-        public String getUsername() {
-            return username;
-        }
-        
-        public void setUsername(String username) {
-            this.username = username;
-        }
-        
-        public String getPassword() {
-            return password;
-        }
-        
-        public void setPassword(String password) {
-            this.password = password;
-        }
-        
-        public int getPoolSize() {
-            return poolSize;
-        }
-        
-        public void setPoolSize(int poolSize) {
-            this.poolSize = poolSize;
-        }
+
     }
 }

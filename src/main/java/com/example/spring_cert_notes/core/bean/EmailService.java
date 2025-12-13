@@ -1,6 +1,7 @@
-package com.example.spring_cert_notes.core;
+package com.example.spring_cert_notes.core.bean;
 
 import com.example.spring_cert_notes.Prefixes;
+import com.example.spring_cert_notes.core.User;
 import lombok.Getter;
 import lombok.Setter;
 

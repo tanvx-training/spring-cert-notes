@@ -1,6 +1,7 @@
-package com.example.spring_cert_notes.core;
+package com.example.spring_cert_notes.core.bean;
 
 import com.example.spring_cert_notes.Prefixes;
+import com.example.spring_cert_notes.core.User;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
@@ -85,7 +86,7 @@ public class CoreDemo {
         
         // Prototype: Creates new instance on each getBean()
         System.out.println("\n--- PROTOTYPE SCOPE ---");
-        ServiceConfig.NotificationService notif1 = 
+        ServiceConfig.NotificationService notif1 =
             context.getBean(ServiceConfig.NotificationService.class);
         ServiceConfig.NotificationService notif2 = 
             context.getBean(ServiceConfig.NotificationService.class);

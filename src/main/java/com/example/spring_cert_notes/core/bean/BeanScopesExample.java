@@ -1,4 +1,4 @@
-package com.example.spring_cert_notes.core;
+package com.example.spring_cert_notes.core.bean;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
