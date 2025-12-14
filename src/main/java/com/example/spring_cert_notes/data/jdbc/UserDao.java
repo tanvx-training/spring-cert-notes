@@ -153,7 +153,7 @@ public class UserDao {
     // BATCH OPERATIONS
     // ============================================================
     
-    public int[] batchInsert(List<User> users) {
+    public int[][] batchInsert(List<User> users) {
         System.out.println(Prefixes.DATA_JDBC + "Batch inserting " + users.size() + " users");
         String sql = "INSERT INTO users (name, email, balance) VALUES (?, ?, ?)";
         return jdbcTemplate.batchUpdate(sql, users, users.size(),
