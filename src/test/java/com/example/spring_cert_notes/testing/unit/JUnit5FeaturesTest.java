@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assumptions.*;
 
 /**
  * BÀI 2: JUNIT 5 FEATURES - Assertions, Assumptions, ParameterizedTest
- * 
+ * <p>
  * Mục tiêu:
  * - Hiểu các loại Assertions trong JUnit 5
  * - Sử dụng Assumptions để skip tests có điều kiện
@@ -167,27 +167,27 @@ class JUnit5FeaturesTest {
     class ParameterizedTestExamples {
         
         @ParameterizedTest(name = "Value {0} should be positive")
-        @ValueSource(ints = {1, 5, 10, 100})
+        @ValueSource(ints = {1, 5, 10, 100, 0})
         @DisplayName("@ValueSource - simple values")
         void valueSourceTest(int number) {
             assertTrue(number > 0);
         }
         
         @ParameterizedTest(name = "String \"{0}\" should not be blank")
-        @ValueSource(strings = {"Hello", "World", "JUnit5"})
+        @ValueSource(strings = {"Hello", "World", "JUnit5", ""})
         @DisplayName("@ValueSource with strings")
         void valueSourceStringsTest(String value) {
             assertFalse(value.isBlank());
         }
         
-        @ParameterizedTest
+        @ParameterizedTest(name = "Value = {0}")
         @NullSource
         @DisplayName("@NullSource - test with null")
         void nullSourceTest(String value) {
             assertNull(value);
         }
         
-        @ParameterizedTest
+        @ParameterizedTest(name = "Value = {0}")
         @EmptySource
         @DisplayName("@EmptySource - test with empty")
         void emptySourceTest(String value) {
@@ -196,7 +196,7 @@ class JUnit5FeaturesTest {
         
         @ParameterizedTest
         @NullAndEmptySource
-        @ValueSource(strings = {"  ", "\t", "\n"})
+        @ValueSource(strings = {"1", "2", "3"})
         @DisplayName("@NullAndEmptySource + @ValueSource")
         void nullEmptyAndBlankStrings(String value) {
             assertTrue(value == null || value.isBlank());

@@ -1,15 +1,21 @@
 package com.example.spring_cert_notes.testing.entity;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
+
 import java.time.LocalDateTime;
 
 /**
  * User Entity cho Testing Demo
  */
+@Setter
+@Getter
 @Entity
 @Table(name = "test_users")
 public class User {
 
+    // Getters and Setters
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -42,19 +48,7 @@ public class User {
         this.name = name;
         this.email = name.toLowerCase().replace(" ", ".") + "@example.com";
     }
-    
-    // Getters and Setters
-    public Long getId() { return id; }
-    public void setId(Long id) { this.id = id; }
-    public String getName() { return name; }
-    public void setName(String name) { this.name = name; }
-    public String getEmail() { return email; }
-    public void setEmail(String email) { this.email = email; }
-    public boolean isActive() { return active; }
-    public void setActive(boolean active) { this.active = active; }
-    public LocalDateTime getCreatedAt() { return createdAt; }
-    public void setCreatedAt(LocalDateTime createdAt) { this.createdAt = createdAt; }
-    
+
     @Override
     public String toString() {
         return "User{id=" + id + ", name='" + name + "', email='" + email + "'}";

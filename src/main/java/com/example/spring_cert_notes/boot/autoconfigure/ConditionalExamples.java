@@ -2,9 +2,9 @@ package com.example.spring_cert_notes.boot.autoconfigure;
 
 import org.springframework.boot.autoconfigure.condition.*;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Conditional;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;
+import org.springframework.boot.system.JavaVersion;
 
 import javax.sql.DataSource;
 
@@ -174,7 +174,7 @@ public class ConditionalExamples {
      */
     @Bean
     @ConditionalOnJava(range = ConditionalOnJava.Range.EQUAL_OR_NEWER, 
-                       value = ConditionalOnJava.JavaVersion.SEVENTEEN)
+                       value = JavaVersion.SEVENTEEN)
     public String java17OrNewer() {
         return "Running on Java 17 or newer";
     }
