@@ -42,5 +42,6 @@ public class Prefixes {
     public static final String BOOT_STARTER = "🟩 [BOOT/STARTER] ";
     public static final String BOOT_ACTUATOR = "🟥 [BOOT/ACTUATOR] ";
     public static final String BOOT_METRICS = "🟧 [BOOT/METRICS] ";
+    public static final String BOOT = "🟫 [BOOT] ";;
 }
 
