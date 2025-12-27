@@ -11,7 +11,7 @@ import static org.assertj.core.api.Assertions.*;
 
 /**
  * BÀI 6: @JsonTest - Test JSON Serialization/Deserialization
- * 
+ * <p>
  * Mục tiêu:
  * - Test JSON serialization (Object -> JSON)
  * - Test JSON deserialization (JSON -> Object)

@@ -19,7 +19,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 /**
  * BÀI 4: FULL INTEGRATION TEST VỚI @SpringBootTest
- * 
+ * <p>
  * Mục tiêu:
  * - Sử dụng @SpringBootTest để test toàn bộ application
  * - @AutoConfigureMockMvc để test HTTP endpoints
@@ -29,7 +29,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * - Load toàn bộ application context
  * - Có thể test với real database hoặc embedded
  * - Chậm hơn test slices nhưng test được full integration
- * 
+ * <p>
  * WebEnvironment options:
  * - MOCK (default): Mock servlet environment
  * - RANDOM_PORT: Start real server on random port

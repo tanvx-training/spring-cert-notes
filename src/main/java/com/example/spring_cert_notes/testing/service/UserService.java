@@ -2,6 +2,7 @@ package com.example.spring_cert_notes.testing.service;
 
 import com.example.spring_cert_notes.testing.entity.User;
 import com.example.spring_cert_notes.testing.repository.UserRepository;
+import org.springframework.boot.jackson.JsonComponent;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

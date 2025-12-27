@@ -15,7 +15,7 @@ import static org.assertj.core.api.Assertions.*;
 
 /**
  * BÀI 2: INTEGRATION TEST VỚI @DataJpaTest
- * 
+ * <p>
  * Mục tiêu:
  * - Sử dụng @DataJpaTest để test JPA repositories
  * - TestEntityManager để setup test data
